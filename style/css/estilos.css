@@ -1,0 +1,318 @@
+/* Contenedor de la tabla */
+.tabla-container {
+    max-width: 1000px;
+    margin: 70px auto;
+    padding: 20px;
+    background-color: #ffffff; /* blanco limpio para contraste */
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* Hacer que la tabla no se desborde horizontalmente */
+.tabla-container {
+    overflow-x: auto;
+}
+
+/* Opcional: para asegurar que las celdas no se expandan demasiado */
+table {
+    table-layout: auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Asegurar que los inputs no crezcan fuera de las celdas */
+table input, table select {
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* Título principal */
+.tabla-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #0F172A; /* azul marino del menú */
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Encabezado de la tabla */
+table thead {
+    background-color: #0F172A; /* mismo azul marino del menú */
+    color: white;
+}
+
+table thead th {
+    padding: 15px;
+    text-align: left;
+    font-size: 16px;
+}
+
+/* Cuerpo de la tabla */
+table tbody tr {
+    border-bottom: 1px solid #bbb;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #e3e7ea; /* tono claro que combina con #ced0d2 */
+}
+
+table tbody td {
+    padding: 12px 15px;
+    font-size: 15px;
+    color: #1F2937; /* gris oscuro, coherente con body */
+}
+
+/* Hover sobre filas */
+table tbody tr:hover {
+    background-color: #d1e3f3; /* azul muy claro, combina con el tema */
+    transition: background-color 0.2s;
+}
+
+/* Mensaje de "no hay estudiantes" */
+.tabla-container p {
+    text-align: center;
+    font-size: 16px;
+    color: #6b7280; /* gris medio */
+}
+
+input[readonly] {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    pointer-events: none;
+}
+
+/*fin de css de tabla*/
+
+/*css para menu*/
+.container-fluid
+{
+background-color: #0F172A !important;
+}
+.navbar-toggler
+{
+background-color: #FFFFFF;
+}
+
+
+.navbar
+{
+    background-color:#0F172A !important ;
+}
+
+.offcanvas-body
+{
+    background-color: #ced0d2; /* gris claro */
+}
+.btn-close
+{
+    background-color: white;
+}
+
+.offcanvas-title
+{
+   
+    font-family: Arial !important;
+    color: white;
+   
+}
+.offcanvas-header
+{
+   background-color:#0F172A !important ;  
+}
+
+.nav-link
+{
+   background-color:#506596 !important ; 
+   border: #888 solid 2px;
+   margin: 4px;
+   color: white;
+}
+.navbar-brand
+{
+    color: white !important;
+}
+
+/* fin del menu*/
+
+
+/*body*/
+body {
+  background-color: #d0d0d0; /* gris claro */
+  color: #1F2937; /* gris más oscuro para contraste */
+}
+/*fin body*/
+/*boton de reporte*/
+.btn-generar-pdf {
+  margin-top: 20px;   /* margen arriba */
+  margin-bottom: 10px; /* margen abajo, opcional */
+  padding: 10px 20px;  /* opcional: tamaño del botón */
+  background-color: #0F172A; /* ejemplo color azul marino */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-generar-pdf:hover {
+  background-color: #2563EB; /* azul más claro al pasar el mouse */
+}
+/* fin boton reporte*/
+
+
+
+
+
+/*botones de accion*/
+.btn-accion {
+  background-color: #0F172A;  /* azul */
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  margin-right: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-accion:hover {
+  background-color: #0F172A; /* azul más oscuro */
+}
+
+/* Quitar margen derecho del último botón */
+td > .btn-accion:last-child {
+  margin-right: 0;
+}
+
+
+/*fotmularios*/
+.form-container {
+    max-width: 400px;
+    margin: 70px auto;
+    background-color: #f5f8ff; /* Fondo suave */
+    border: 1px solid #c3d1f0; /* Borde azul claro */
+    border-radius: 8px;
+    padding: 25px 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #0F172A; /* Azul oscuro */
+    margin-bottom: 20px;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 8px;
+    color: #334155; /* Gris azulado */
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="number"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border: 1.5px solid #9bb3f9; /* Azul claro */
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="number"]:focus {
+    border-color: #0F172A; /* Azul más fuerte al foco */
+    outline: none;
+    box-shadow: 0 0 6px #a5b4fc;
+}
+
+.form-container button {
+    width: 100%;
+    background-color: #0F172A; /* Azul fuerte */
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: rgb(33, 42, 100); /* Azul hover */
+}
+
+
+/* pagina principal */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  margin-top: 90px;
+  justify-content:center;
+  
+}
+
+.card {
+  background-color: #5179b6;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 250px;         /* Menor ancho */
+  height: 200px;        /* Altura fija para hacerlo cuadrado */
+  padding: 15px;
+  box-sizing: border-box;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: justify;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card-title {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: white !important;
+  border-bottom: 2px solid black;
+  padding: 5px;
+  text-align: center;
+}
+
+.card-text {
+  font-size: 13px;
+  color: #666;
+  flex-grow: 1;
+  color: white !important;
+}
+
+.card-link {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 13px;
+  border: #a6a9af solid 3px;
+  background-color: #a5a0a0ff;
+  text-align: center;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+/*fin principal*/
