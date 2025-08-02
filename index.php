@@ -1,8 +1,8 @@
 <?php
-require_once("views/login/login.php");
+require_once("C:/xampp/htdocs/universidad/views/login/login.php");
 ?>
 
 
 <?php
-require_once("/views/head/footer.php");
+require_once("C:/xampp/htdocs/universidad/views/head/footer.php");
 ?>

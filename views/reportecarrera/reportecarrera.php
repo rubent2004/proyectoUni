@@ -1,6 +1,6 @@
 <?php
-require_once("/universidad/views/head/header.php");
-require_once("/universidad/controllers/reportecarreracontrollers/reportecarrera.php");
+require_once("C:/xampp/htdocs/universidad/views/head/header.php");
+require_once("C:/xampp/htdocs/universidad/controllers/reportecarreracontrollers/reportecarrera.php");
 
 $controlador = new ReportecarreraControllers();
 
@@ -73,4 +73,4 @@ $reporte = $controlador->ReporteCarrera($idCarreraSeleccionada);
     <?php endif; ?>
 </div>
 
-<?php require_once("/universidad/views/head/footer.php"); ?>
+<?php require_once("C:/xampp/htdocs/universidad/views/head/footer.php"); ?>

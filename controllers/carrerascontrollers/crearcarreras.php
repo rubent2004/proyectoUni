@@ -5,7 +5,7 @@
     
     public function __construct()
     {
- require_once("/universidad/models/carrerasmodels/crearcarreras.php");
+ require_once("C:/xampp/htdocs/universidad/models/carrerasmodels/crearcarreras.php");
 
         $this->modelocarrera = new AgregarCarrerasModels();
     }

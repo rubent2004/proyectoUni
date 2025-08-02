@@ -1,6 +1,6 @@
 <?php
-require_once("/universidad/views/head/header.php");
-require_once("/universidad/controllers/estudiantescontrollers/verestudiantes.php");
+require_once("C:/xampp/htdocs/universidad/views/head/header.php");
+require_once("C:/xampp/htdocs/universidad/controllers/estudiantescontrollers/verestudiantes.php");
 
 // Controlador estudiantes
 $controlador = new VerEstudiantesControllers();
@@ -176,4 +176,4 @@ function confirmarEliminacion() {
 </script>
 
 
-<?php require_once("/universidad/views/head/footer.php"); ?>
+<?php require_once("C:/xampp/htdocs/universidad/views/head/footer.php"); ?>

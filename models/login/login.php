@@ -3,7 +3,7 @@ class LoginModel {
     private $db;
 
     public function __construct() {
-        require_once("/universidad/confi/conexion.php");
+        require_once("C:/xampp/htdocs/universidad/confi/conexion.php");
         $conexion = new db();
         $this->db = $conexion->conexion();
     }

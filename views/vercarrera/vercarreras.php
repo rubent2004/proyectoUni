@@ -1,6 +1,6 @@
 <?php
-require_once("/universidad/views/head/header.php");
-require_once("/universidad/controllers/carrerascontrollers/vercarreras.php");
+require_once("C:/xampp/htdocs/universidad/views/head/header.php");
+require_once("C:/xampp/htdocs/universidad/controllers/carrerascontrollers/vercarreras.php");
 
 $controlador = new VerEstudiantesControllers();
 $mensaje = '';
@@ -118,4 +118,4 @@ function confirmarEliminar() {
 </script>
 <?php endif; ?>
 
-<?php require_once("/universidad/views/head/footer.php"); ?>
+<?php require_once("C:/xampp/htdocs/universidad/views/head/footer.php"); ?>

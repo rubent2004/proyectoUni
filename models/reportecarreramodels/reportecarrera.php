@@ -5,7 +5,7 @@ class Reportecarreramodels
 
     public function __construct()
     {
-        require_once("/universidad/confi/conexion.php");
+        require_once("C:/xampp/htdocs/universidad/confi/conexion.php");
         $objbd = new db();
         $this->db = $objbd->conexion();
         if (!$this->db) {

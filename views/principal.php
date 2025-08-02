@@ -1,6 +1,6 @@
 
 <?php
-require_once("/universidad/views/head/header.php");
+require_once("C:/xampp/htdocs/universidad/views/head/header.php");
 ?>
   <div class="card-container">
     <div class="card">
@@ -36,5 +36,5 @@ require_once("/universidad/views/head/header.php");
 
 
 <?php
-require_once("/universidad/views/head/footer.php");
+require_once("C:/xampp/htdocs/universidad/views/head/footer.php");
 ?>

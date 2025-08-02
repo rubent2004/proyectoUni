@@ -5,7 +5,7 @@ class VerEstudiantesControllers
 
     public function __construct()
     {
-        require_once("/universidad/models/carrerasmodels/vercarreras.php");
+        require_once("C:/xampp/htdocs/universidad/models/carrerasmodels/vercarreras.php");
         $this->modelocarrera = new VerCarrerasModels();
     }
 

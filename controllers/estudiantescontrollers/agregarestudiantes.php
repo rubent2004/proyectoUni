@@ -5,7 +5,7 @@ class AgregarEstudiantesControllers
     
     public function __construct()
     {
-        require_once("/universidad/models/estudiantesmodels/crearestudiantes.php");
+        require_once("C:/xampp/htdocs/universidad/models/estudiantesmodels/crearestudiantes.php");
         $this->modeloestudiantes = new AgregarEstudiantesModels();
     }
 

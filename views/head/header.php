@@ -1,5 +1,5 @@
 <?php
-require_once("/universidad/views/head/head.php");
+require_once("C:/xampp/htdocs/universidad/views/head/head.php");
 ?>
 
 <nav class="navbar bg-body-tertiary fixed-top">
@@ -18,34 +18,20 @@ require_once("/universidad/views/head/head.php");
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item">
-        <a class="nav-link" href="/universidad/views/verestudiantes/verestudiantes.php">
-        <i class="fas fa-users"></i> Ver Estudiantes
-        </a>
-       </li>
-         <li class="nav-item">
-          <a class="nav-link" href="/universidad/views/vercarrera/vercarreras.php">
-            <i class="fas fa-book"></i> Ver Carreras
-          </a>
-        </li>
-
+            <a class="nav-link "  href="/universidad/views/verestudiantes/verestudiantes.php">Ver Estudiantes</a>
+          </li>
           <li class="nav-item">
-          <a class="nav-link" href="/universidad/views/reportecarrera/reportecarrera.php">
-            <i class="fas fa-file-alt"></i> Reporte de las carreras
-          </a>
-        </li>
-
+            <a class="nav-link" href="/universidad/views/vercarrera/vercarreras.php">Ver Carreras</a>
+          </li>
           <li class="nav-item">
-          <a class="nav-link" href="/universidad/views/crearcarrera/crearcarrera.php">
-            <i class="fas fa-plus-circle"></i> Agregar Carrera
-          </a>
-        </li>
-
+            <a class="nav-link" href="/universidad/views/reportecarrera/reportecarrera.php">Reporte de las carreras</a>
+          </li>
           <li class="nav-item">
-          <a class="nav-link" href="/universidad/views/crearestudiantes/crearestudiantes.php">
-            <i class="fas fa-user-plus"></i> Agregar Estudiante
-          </a>
-        </li>
-
+            <a class="nav-link" href="/universidad/views/crearcarrera/crearcarrera.php">Agregar Carrera</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/universidad/views/crearestudiantes/crearestudiantes.php">Agregar Estudiante</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -53,5 +39,5 @@ require_once("/universidad/views/head/head.php");
 </nav>
 
 <?php
-require_once("/universidad/views/head/footer.php");
+require_once("C:/xampp/htdocs/universidad/views/head/footer.php");
 ?>

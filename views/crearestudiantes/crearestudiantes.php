@@ -1,6 +1,6 @@
 <?php
-require_once("/universidad/views/head/header.php");
-require_once("/universidad/controllers/estudiantescontrollers/agregarestudiantes.php");
+require_once("C:/xampp/htdocs/universidad/views/head/header.php");
+require_once("C:/xampp/htdocs/universidad/controllers/estudiantescontrollers/agregarestudiantes.php");
 
 $controlador = new AgregarEstudiantesControllers();
 $carrera = $controlador->ObtenerCarreras();
@@ -72,5 +72,5 @@ echo $mensaje;
 </div>
 
 <?php
-require_once("/universidad/views/head/footer.php");
+require_once("C:/xampp/htdocs/universidad/views/head/footer.php");
 ?>

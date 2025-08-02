@@ -1,5 +1,5 @@
 <?php
-require_once("/universidad/controllers/login/login.php");
+require_once("C:/xampp/htdocs/universidad/controllers/login/login.php");
 
 $error = "";
 
@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $controller = new LoginController();
     $error = $controller->login($_POST['correo'], $_POST['password']);
 }
-?>
+?>  
 
 <!DOCTYPE html>
 <html lang="es">

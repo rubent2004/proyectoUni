@@ -5,7 +5,7 @@ class VerEstudiantesControllers
 
     public function __construct()
     {
-        require_once("/universidad/models/estudiantesmodels/verestudiantes.php");
+        require_once("C:/xampp/htdocs/universidad/models/estudiantesmodels/verestudiantes.php");
         $this->modeloestudiantes = new VerEstudiantesModels();
     }
 
