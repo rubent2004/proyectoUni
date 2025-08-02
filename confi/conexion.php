@@ -1,7 +1,8 @@
 <?php
 class db
 {
-    private $server = 'db'; // nombre del servicio en docker-compose
+
+    private $server = 'db'; // nombe del servicio en docker-compose
     private $user = 'usuario';
     private $pass = 'usuariopass';
     private $db = 'universidad';
