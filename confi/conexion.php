@@ -1,16 +1,17 @@
 <?php
 class db
 {
-
-    private $server = 'db'; // nombe del servicio en docker-compose
-    private $user = 'usuario';
-    private $pass = 'usuariopass';
-    private $db = 'universidad';
+    private $server = 'nozomi.proxy.rlwy.net';
+    private $port = 18742; // 📌 cámbialo por el correcto desde Railway
+    private $user = 'root';
+    private $pass = 'eVxpxeszlsipEHBokRwxXizlPRIRbTxk';
+    private $db = 'railway';
 
     public function conexion()
     {
         try {
-            $conn = new PDO("mysql:host={$this->server};dbname={$this->db};charset=utf8", $this->user, $this->pass);
+            $dsn = "mysql:host={$this->server};port={$this->port};dbname={$this->db};charset=utf8";
+            $conn = new PDO($dsn, $this->user, $this->pass);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return $conn;
         } catch (PDOException $e) {
