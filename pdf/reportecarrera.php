@@ -1,6 +1,11 @@
 <?php
-require_once("../confi/conexion.php");
-require_once("TCPDF-main/tcpdf.php");
+require_once __DIR__ . '/../confi/conexion.php';
+require_once __DIR__ . '/TCPDF-main/tcpdf.php';
+
+// Limpia cualquier buffer de salida activo para evitar conflictos
+if (ob_get_length()) {
+    ob_end_clean();
+}
 
 // Recibir filtro id_carrera
 $id_carrera = $_POST['id_carrera'] ?? null;
@@ -72,5 +77,4 @@ if (!empty($datos)) {
     $pdf->Cell(0, 10, 'No hay estudiantes para mostrar.', 0, 1, 'C');
 }
 
-ob_end_clean(); // Limpia buffer de salida para evitar errores
 $pdf->Output('reporte_carreras.pdf', 'I');

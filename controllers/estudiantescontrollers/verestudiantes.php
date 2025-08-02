@@ -5,7 +5,8 @@ class VerEstudiantesControllers
 
     public function __construct()
     {
-        require_once("C:/xampp/htdocs/universidad/models/estudiantesmodels/verestudiantes.php");
+        require_once __DIR__ . '/../../models/estudiantesmodels/verestudiantes.php';
+
         $this->modeloestudiantes = new VerEstudiantesModels();
     }
 
@@ -25,9 +26,7 @@ class VerEstudiantesControllers
     }
 
     public function EliminarEstudiante($id_estudiante)
-{
-    return $this->modeloestudiantes->EliminarEstudiante($id_estudiante);
+    {
+        return $this->modeloestudiantes->EliminarEstudiante($id_estudiante);
+    }
 }
-
-}
-

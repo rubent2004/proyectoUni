@@ -1,6 +1,6 @@
 <?php
-require_once("C:/xampp/htdocs/universidad/views/head/header.php");
-require_once("C:/xampp/htdocs/universidad/controllers/carrerascontrollers/vercarreras.php");
+require_once __DIR__ . '/../head/header.php';
+require_once __DIR__ . '/../../controllers/carrerascontrollers/vercarreras.php';
 
 $controlador = new VerEstudiantesControllers();
 $mensaje = '';
@@ -33,51 +33,58 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['guardar'])) {
 $carreras = $controlador->VerCarreras();
 ?>
 
-<link rel="stylesheet" href="/universidad/style/css/estilos.css">
+<link rel="stylesheet" href="/style/css/estilos.css">
 
 <div class="tabla-container">
     <h1>Listado de Carreras</h1>
 
     <?php if (!empty($carreras)): ?>
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nombre</th>
-                    <th>Descripción</th>
-                    <th>Duración</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($carreras as $carrera): ?>
-                    <tr>
-                        <td><?= $carrera['id_carrera'] ?></td>
-                        <form method="post">
-                            <td>
-                                <input type="hidden" name="id" value="<?= $carrera['id_carrera'] ?>">
-                                <input type="text" name="nombre_carrera" value="<?= htmlspecialchars($carrera['nombre_carrera']) ?>" readonly>
-                            </td>
-                            <td>
-                                <input type="text" name="descripcion" value="<?= htmlspecialchars($carrera['descripcion']) ?>" readonly>
-                            </td>
-                            <td>
-                                <input type="number" name="duracion" value="<?= htmlspecialchars($carrera['duracion']) ?>" readonly>
-                            </td>
-                            <td>
-  <button type="button" class="editar-btn btn-accion" onclick="activarEdicion(this)">Editar</button>
-  <button type="submit" name="guardar" class="guardar-btn btn-accion" style="display:none;">Guardar</button>
-  <button type="button" class="cancelar-btn btn-accion" style="display:none;" onclick="cancelarEdicion(this)">Cancelar</button>
-  <button type="submit" name="eliminar" class="btn-accion" onclick="return confirmarEliminar()">Eliminar</button>
-</td>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Duración</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($carreras as $carrera): ?>
+            <tr>
+                <td><?= $carrera['id_carrera'] ?></td>
+                <form method="post">
+                    <td>
+                        <input type="hidden" name="id" value="<?= $carrera['id_carrera'] ?>">
+                        <input type="text" name="nombre_carrera"
+                            value="<?= htmlspecialchars($carrera['nombre_carrera']) ?>" readonly>
+                    </td>
+                    <td>
+                        <input type="text" name="descripcion" value="<?= htmlspecialchars($carrera['descripcion']) ?>"
+                            readonly>
+                    </td>
+                    <td>
+                        <input type="number" name="duracion" value="<?= htmlspecialchars($carrera['duracion']) ?>"
+                            readonly>
+                    </td>
+                    <td>
+                        <button type="button" class="editar-btn btn-accion"
+                            onclick="activarEdicion(this)">Editar</button>
+                        <button type="submit" name="guardar" class="guardar-btn btn-accion"
+                            style="display:none;">Guardar</button>
+                        <button type="button" class="cancelar-btn btn-accion" style="display:none;"
+                            onclick="cancelarEdicion(this)">Cancelar</button>
+                        <button type="submit" name="eliminar" class="btn-accion"
+                            onclick="return confirmarEliminar()">Eliminar</button>
+                    </td>
 
-                        </form>
-                    </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
+                </form>
+            </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
     <?php else: ?>
-        <p>No hay carreras para mostrar.</p>
+    <p>No hay carreras para mostrar.</p>
     <?php endif; ?>
 </div>
 
@@ -114,8 +121,8 @@ function confirmarEliminar() {
 
 <?php if (!empty($mensaje)): ?>
 <script>
-    alert("<?= addslashes($mensaje) ?>");
+alert("<?= addslashes($mensaje) ?>");
 </script>
 <?php endif; ?>
 
-<?php require_once("C:/xampp/htdocs/universidad/views/head/footer.php"); ?>
+<?php require_once __DIR__ . '/../head/footer.php';  ?>

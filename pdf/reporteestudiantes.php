@@ -1,6 +1,11 @@
 <?php
-require_once("../confi/conexion.php");
-require_once("TCPDF-main/tcpdf.php");
+require_once __DIR__ . '/../confi/conexion.php';
+require_once __DIR__ . '/TCPDF-main/tcpdf.php';
+
+// Limpiar buffers de salida previos para evitar conflictos con TCPDF
+while (ob_get_level()) {
+    ob_end_clean();
+}
 
 $carnet = $_POST['carnet'] ?? null;
 
@@ -31,7 +36,6 @@ try {
 
     $stmt->execute();
     $estudiantes = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
 } catch (PDOException $e) {
     die("Error en consulta: " . $e->getMessage());
 }
@@ -78,12 +82,10 @@ if (!empty($estudiantes)) {
         $pdf->Cell(50, 8, 'Duración Carrera:', 0, 0);
         $pdf->Cell(0, 8, $estudiante['duracion'] . ' años', 0, 1);
 
-        // Espacio entre estudiantes
         $pdf->Ln(10);
     }
 } else {
     $pdf->Cell(0, 10, 'No hay estudiantes para mostrar.', 0, 1, 'C');
 }
 
-ob_end_clean();
 $pdf->Output('reporte_estudiantes_vertical.pdf', 'I');

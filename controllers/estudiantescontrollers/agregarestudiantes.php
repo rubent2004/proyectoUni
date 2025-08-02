@@ -2,10 +2,10 @@
 class AgregarEstudiantesControllers
 {
     private $modeloestudiantes;
-    
+
     public function __construct()
     {
-        require_once("C:/xampp/htdocs/universidad/models/estudiantesmodels/crearestudiantes.php");
+        require_once __DIR__ . '/../../models/estudiantesmodels/crearestudiantes.php';
         $this->modeloestudiantes = new AgregarEstudiantesModels();
     }
 
@@ -23,4 +23,3 @@ class AgregarEstudiantesControllers
         return $this->modeloestudiantes->obtenercarreras();
     }
 }
-?>

@@ -1,6 +1,6 @@
 <?php
-require_once("C:/xampp/htdocs/universidad/views/head/header.php");
-require_once("C:/xampp/htdocs/universidad/controllers/reportecarreracontrollers/reportecarrera.php");
+require_once __DIR__ . '/../head/header.php';
+require_once __DIR__ . '/../../controllers/reportecarreracontrollers/reportecarrera.php';
 
 $controlador = new ReportecarreraControllers();
 
@@ -16,7 +16,7 @@ if (isset($_POST['regresar'])) {
 
 $reporte = $controlador->ReporteCarrera($idCarreraSeleccionada);
 ?>
-<link rel="stylesheet" href="/universidad/style/css/estilos.css">
+<link rel="stylesheet" href="/style/css/estilos.css">
 <div class="tabla-container">
     <h1>Listado de Carreras con Estudiantes</h1>
 
@@ -25,7 +25,8 @@ $reporte = $controlador->ReporteCarrera($idCarreraSeleccionada);
         <select name="id_carrera" id="id_carrera" <?= (isset($_POST['regresar'])) ? '' : 'required' ?>>
             <option value="">-- Selecciona una carrera --</option>
             <?php foreach ($carreras as $carrera): ?>
-                <option value="<?= $carrera['id_carrera'] ?>" <?= ($idCarreraSeleccionada == $carrera['id_carrera']) ? 'selected' : '' ?>>
+                <option value="<?= $carrera['id_carrera'] ?>"
+                    <?= ($idCarreraSeleccionada == $carrera['id_carrera']) ? 'selected' : '' ?>>
                     <?= htmlspecialchars($carrera['nombre_carrera']) ?>
                 </option>
             <?php endforeach; ?>
@@ -63,7 +64,7 @@ $reporte = $controlador->ReporteCarrera($idCarreraSeleccionada);
         </table>
 
         <!-- Botón para generar PDF -->
-        <form  action="/universidad/pdf/reportecarrera.php" method="POST" target="_blank">
+        <form action="/pdf/reportecarrera.php" method="POST" target="_blank">
             <input type="hidden" name="id_carrera" value="<?= $idCarreraSeleccionada ?>">
             <button type="submit" class="btn-generar-pdf">Generar PDF</button>
         </form>
@@ -73,4 +74,4 @@ $reporte = $controlador->ReporteCarrera($idCarreraSeleccionada);
     <?php endif; ?>
 </div>
 
-<?php require_once("C:/xampp/htdocs/universidad/views/head/footer.php"); ?>
+<?php require_once __DIR__ . '/../head/footer.php';  ?>

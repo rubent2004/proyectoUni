@@ -5,7 +5,8 @@ class ReportecarreraControllers
 
     public function __construct()
     {
-        require_once("C:/xampp/htdocs/universidad/models/reportecarreramodels/reportecarrera.php");
+        require_once __DIR__ . '/../../models/reportecarreramodels/reportecarrera.php';
+
         $this->modeloreporte = new Reportecarreramodels();
     }
 
@@ -19,4 +20,3 @@ class ReportecarreraControllers
         return $this->modeloreporte->ObtenerCarreras();
     }
 }
-

@@ -1,6 +1,6 @@
 <?php
-require_once("C:/xampp/htdocs/universidad/views/head/header.php");
-require_once("C:/xampp/htdocs/universidad/controllers/carrerascontrollers/crearcarreras.php");
+require_once __DIR__ . '/../head/header.php';
+require_once __DIR__ . '/../../controllers/carrerascontrollers/crearcarreras.php';
 
 $controlador = new AgregarCarrerasControllers();
 
@@ -38,5 +38,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </div>
 
 <?php
-require_once("C:/xampp/htdocs/universidad/views/head/footer.php");
+require_once __DIR__ . '/../head/footer.php';
 ?>

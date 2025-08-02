@@ -5,7 +5,8 @@ class AgregarCarrerasModels
     private $db;
     public function __construct()
     {
-        require_once("C:/xampp/htdocs/universidad/confi/conexion.php");
+        require_once __DIR__ . '/../../confi/conexion.php';
+
         $objbd = new db();
         $this->db = $objbd->conexion();
 
@@ -32,7 +33,7 @@ class AgregarCarrerasModels
             return 'existe';
         }
 
-        $sql=$this->db->prepare("INSERT INTO carreras (nombre_carrera, descripcion, duracion)
+        $sql = $this->db->prepare("INSERT INTO carreras (nombre_carrera, descripcion, duracion)
             VALUES (:nombre_carrera, :descripcion, :duracion)");
 
         $sql->bindParam(':nombre_carrera', $Nombre);
@@ -47,6 +48,3 @@ class AgregarCarrerasModels
         }
     }
 }
-
-
-    ?>

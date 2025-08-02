@@ -5,7 +5,7 @@ class VerEstudiantesControllers
 
     public function __construct()
     {
-        require_once("C:/xampp/htdocs/universidad/models/carrerasmodels/vercarreras.php");
+        require_once __DIR__ . '/../../models/carrerasmodels/vercarreras.php';
         $this->modelocarrera = new VerCarrerasModels();
     }
 
@@ -19,8 +19,7 @@ class VerEstudiantesControllers
         return $this->modelocarrera->ActualizarCarrera($nombre, $descripcion, $duraccion,  $id);
     }
     public function EliminarCarrera($id)
-{
-    return $this->modelocarrera->EliminarCarrera($id);
-}
-
+    {
+        return $this->modelocarrera->EliminarCarrera($id);
+    }
 }

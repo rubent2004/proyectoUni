@@ -639,7 +639,7 @@
 
 6.0.013 (2013-04-10)
 	- Add support for SVG dx and dy text/tspan attributes.
-	- replace require() with require_once().
+	- replace require() with require_once( ).
 	- fix some minor typos on documentation.
 	- fix a problem when deleting all pages.
 

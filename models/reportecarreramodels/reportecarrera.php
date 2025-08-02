@@ -5,7 +5,7 @@ class Reportecarreramodels
 
     public function __construct()
     {
-        require_once("C:/xampp/htdocs/universidad/confi/conexion.php");
+        require_once __DIR__ . '/../../confi/conexion.php';
         $objbd = new db();
         $this->db = $objbd->conexion();
         if (!$this->db) {
@@ -38,7 +38,6 @@ class Reportecarreramodels
 
             $sql->execute();
             return $sql->fetchAll(PDO::FETCH_ASSOC);
-
         } catch (PDOException $e) {
             error_log("Error en reporte: " . $e->getMessage());
             return [];

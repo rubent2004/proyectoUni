@@ -1,13 +1,14 @@
 <?php
-require_once("C:/xampp/htdocs/universidad/views/head/header.php");
-require_once("C:/xampp/htdocs/universidad/controllers/estudiantescontrollers/agregarestudiantes.php");
+require_once __DIR__ . '/../head/header.php';
+require_once __DIR__ . '/../../controllers/estudiantescontrollers/agregarestudiantes.php';
 
 $controlador = new AgregarEstudiantesControllers();
 $carrera = $controlador->ObtenerCarreras();
 
 $mensaje = '';
 
-function calcularEdad($fecha_nacimiento) {
+function calcularEdad($fecha_nacimiento)
+{
     $fecha_nac = new DateTime($fecha_nacimiento);
     $hoy = new DateTime();
     $edad = $hoy->diff($fecha_nac)->y;
@@ -16,14 +17,14 @@ function calcularEdad($fecha_nacimiento) {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $resultado = $controlador->AgregarEstudiantes(
-    $_POST['nombre_completo'],
-    $_POST['carnet'],
-    calcularEdad($_POST['fecha_nacimiento']),
-    $_POST['direccion'],
-    $_POST['telefono'],
-    $_POST['correo'],
-    $_POST['id_carrera']
-);
+        $_POST['nombre_completo'],
+        $_POST['carnet'],
+        calcularEdad($_POST['fecha_nacimiento']),
+        $_POST['direccion'],
+        $_POST['telefono'],
+        $_POST['correo'],
+        $_POST['id_carrera']
+    );
 
 
     if ($resultado === true) {
@@ -62,15 +63,16 @@ echo $mensaje;
         <select id="id_carrera" name="id_carrera" required>
             <option value="">Seleccione una carrera</option>
             <?php foreach ($carrera as $carreras): ?>
-                <option value="<?= htmlspecialchars($carreras['id_carrera']) ?>"><?= htmlspecialchars($carreras['nombre_carrera']) ?></option>
+                <option value="<?= htmlspecialchars($carreras['id_carrera']) ?>">
+                    <?= htmlspecialchars($carreras['nombre_carrera']) ?></option>
             <?php endforeach; ?>
         </select>
-      <br/><br/>
+        <br /><br />
 
         <button type="submit">Agregar</button>
     </form>
 </div>
 
 <?php
-require_once("C:/xampp/htdocs/universidad/views/head/footer.php");
+require_once __DIR__ . '/../head/footer.php';
 ?>
